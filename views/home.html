@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+   
+</head>
+<body>
+        
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">CURSO NODE</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" id="username">User</a></li>
+           
+          </ul>
+         
+          <ul class="nav navbar-nav navbar-right">
+             <!--  <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</a></li>
+         -->    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container" style="margin-top:100px;">
+
+            <h1 class="text-primary"> HOME</h1>
+          </div>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $.post("http://localhost:8080/data",function(data){
+            document.getElementById('username').innerHTML=data;
+        }).fail(function(){
+            alert("error")
+        })
+
+    })
+   
+   </script>
+</body>
+</html>
