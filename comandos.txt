@@ -1,0 +1,17 @@
+CEAR EL ARCHIVO package.json
+    >npm init
+INSTALAR EXPRESS
+    >npm install --save express
+EVITAR REINICIAR EL SERVIDOR LUEGO DE CADA CAMBIOS
+    1.- Instalar nodemon    
+    >sudo npm install -g --save nodemon   
+
+    2.- En el archivo package.json agregar el script con nodemon
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+    }   
+INICIAR EL SERVIDOR CON EL ARCHIVO CONFIGURADO (server.js)
+    >npm start
+PERMITE LEER PARÁMETROS ENVIADOS POR EL MÉTODO POST  
+    >npm install --save body-parser 
